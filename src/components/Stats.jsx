@@ -46,9 +46,6 @@ const Stats = () => {
 				Статус: item.Status ? 'Активно' : 'Неактивно',
 				'Изготовлено продукции': item.unit_producted,
 				'Потребление энергии': item.Energy_consumption,
-				'Последнее обслуживание': new Date(
-					item.data_last_servis * 1000
-				).toLocaleDateString()
 			}
 		})
 
@@ -113,7 +110,7 @@ const Stats = () => {
 
 	return (
 		<div>
-			<h1>Статистика</h1>
+			<h2>Статистика</h2>
 
 			{!showForm ? (
 				<>
@@ -156,7 +153,7 @@ const Stats = () => {
 				</Modal>
 			)}
 
-			<Table bordered hover id='table-to-export' style={{ width: 1600 }}>
+			<Table bordered hover id='table-to-export' style={{ width: 1400 }}>
 				<thead>
 					<tr className='hover'>
 						<th onClick={() => handleColumnSelect('name')}>Название</th>
@@ -169,15 +166,12 @@ const Stats = () => {
 						<th onClick={() => handleColumnSelect('pressure')}>
 							Давление {sortOrder.pressure === 'asc' ? '' : ''}
 						</th>
-						<th onClick={() => handleColumnSelect('Status')}>Статус</th>
-						<th onClick={() => handleColumnSelect('unit_producted')}>
+						<th >Статус</th>
+						<th >
 							Изготовлено продукции
 						</th>
-						<th onClick={() => handleColumnSelect('Energy_consumption')}>
+						<th >
 							Потребление энергии
-						</th>
-						<th onClick={() => handleColumnSelect('data_last_servis')}>
-							Последнее обслуживание
 						</th>
 					</tr>
 				</thead>
@@ -192,9 +186,6 @@ const Stats = () => {
 							<td>{item.Status ? 'Активно' : 'Неактивно'}</td>
 							<td>{item.unit_producted}</td>
 							<td>{item.Energy_consumption}</td>
-							<td>
-								{new Date(item.data_last_servis * 1000).toLocaleDateString()}
-							</td>
 						</tr>
 					))}
 				</tbody>

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Popover from 'react-bootstrap/Popover'
-import '../App.css'
 import notif from '../img/notifications.svg'
 
 const Header = () => {
@@ -13,11 +12,10 @@ const Header = () => {
 			<Popover.Body>
 				<span>
 					Происшествий {numberNot} <br />
-					<span>Name 1 повышении температуры </span>
-					Name 2 повышение давления
+					<span> EQUIP-002 повышении температуры </span>
+					EQUIP-003 повышение давления
 				</span>
 				<br />
-				<div>Перейти на страницу "Мониторинг"</div>
 				<Button
 					variant='primary'
 					onClick={() => {

@@ -15,22 +15,22 @@ const Crash = ({ show, onHide, crash }) => {
 					<div>
 						<h5>Сбои:</h5>
 						<Alert variant='danger'>
-							{`Сбой произошел на устройстве 2`}
+							{`Неполатки произошли на устройстве EQUIP-002`}
 							<br />
-							{`Температура поднялась до 4 при возможных 60`}
+							{`Температура поднялась до 95 при возможных 70`}
 							<br />
 						</Alert>
 						<Alert variant='danger'>
-							{`Сбой произошел на устройстве 3`}
+							{`Неполатки произошли на устройстве EQUIP-003`}
 							<br />
-							{`Давление поднялось до 4 при возможных 50`}
+							{`Давление поднялось до 98 при возможных 80`}
 						</Alert>
 					</div>
 				) : (
 					<Alert variant='success'>Нет сбоев</Alert>
 				)}
 				<Form>
-					<h5>Введите email адрес для отправки предупреждения:</h5>
+					<h5>Можете ввести email адрес для отправки предупреждения:</h5>
 					<Form.Control placeholder={'Email адрес'} />
 				</Form>
 			</Modal.Body>
@@ -44,7 +44,7 @@ const Crash = ({ show, onHide, crash }) => {
 					</Button>
 				)}
 				<Button variant='outline-success' onClick={onHide}>
-					Отправить
+					Отправить информацию коллеге
 				</Button>
 			</Modal.Footer>
 		</Modal>

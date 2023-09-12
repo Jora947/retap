@@ -1,0 +1,11 @@
+.main__control {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1rem;
+  }
+  
+  .control-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
